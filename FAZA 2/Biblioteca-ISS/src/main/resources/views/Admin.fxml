@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="753.0" style="-fx-background-color: #ff966a;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2024.Controllers.AdminController">
+    <children>
+        <Label alignment="CENTER" layoutX="260.0" layoutY="30.0" prefHeight="35.0" prefWidth="273.0" text="Books Management">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="128.0" layoutY="78.0" prefHeight="18.0" prefWidth="121.0" text="List of all Books">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="411.0" layoutY="126.0" text="Titlu" />
+        <Label alignment="CENTER" layoutX="411.0" layoutY="183.0" prefHeight="18.0" prefWidth="52.0" text="Autor" />
+        <Label layoutX="411.0" layoutY="233.0" text="Disponibilitate" />
+        <Label layoutX="406.0" layoutY="292.0" text="Id Exemplar" />
+        <TextField fx:id="titluTextField" layoutX="499.0" layoutY="122.0" prefHeight="26.0" prefWidth="191.0" />
+        <TextField fx:id="autorTextField" layoutX="499.0" layoutY="179.0" prefHeight="26.0" prefWidth="191.0" />
+        <TextField fx:id="idExemplarTextField" layoutX="499.0" layoutY="288.0" prefHeight="26.0" prefWidth="191.0" />
+        <Button layoutX="418.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="26.0" prefWidth="110.0" text="Add Book" />
+        <Button layoutX="494.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleUpdateBook" prefHeight="26.0" prefWidth="122.0" text="Update Book" />
+        <Button layoutX="555.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleDeleteBook" prefHeight="26.0" prefWidth="122.0" text="Delete Book" />
+        <TableView fx:id="tableViewBooks" layoutX="14.0" layoutY="105.0" prefHeight="347.0" prefWidth="350.0">
+            <columns>
+                <TableColumn fx:id="tableColumnTitlu" prefWidth="108.80005168914795" text="titlu" />
+                <TableColumn fx:id="tableColumnAutor" prefWidth="96.00006103515625" text="autor" />
+                <TableColumn fx:id="tableColumnId_exemplar" prefWidth="96.00006103515625" text="id_exemplar" />
+                <TableColumn fx:id="tableColumnDisponibilitate" prefWidth="143.19997253417966" text="disponibilitate" />
+            </columns>
+        </TableView>
+        <TextField fx:id="disponibilitateTextField" layoutX="499.0" layoutY="229.0" prefHeight="26.0" prefWidth="191.0" />
+        <Button layoutX="662.0" layoutY="505.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="52.0" prefWidth="91.0" text="Logout" />
+    </children>
+</AnchorPane>
